@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  <title>Summary</title>
+</head>
+<body>
+  <main>
+    <div class=results>
+      <h1 class="your-result">Your Result</h1>
+      <div class="circle">
+        <div class="circle-text">76<span class=circle-text2>of 100
+        </span></div>
+      </div>
+      <h2>Great</h2>
+      <p class="desc">You scored higher than 65% of people who have taken these tests.</p>
+    </div>
+    <div class="container">
+      <div class="summary">
+        <h1>Summary</h1>
+          <div class="categories">
+            <ul>
+     <li class="reaction"><img src="assets/images/icon-reaction.svg" alt="Lightning bolt icon"> Reaction <span class="firstNumber">80 </span><span class=secondNumber>/100</span></li>
+     <li class="memory"><img src="assets/images/icon-memory.svg" alt="Brain icon"> Memory <span class="firstNumber">92 </span><span class=secondNumber>/100</span></li>
+   <li class="Verbal"><img src="assets/images/icon-verbal.svg" alt="Text bubble icon">Verbal <span class="firstNumber">61 </span><span class=secondNumber>/100</span></li>
+  <li class="visual"><img src="assets/images/icon-visual.svg" alt="Eye icon">Visual <span class="firstNumber">73 </span><span class=secondNumber>/100</span></li>
+            </ul>
+          </div>
+          <button>Continue</button>
+        </div>
+
+      </div>
+    </div>
+    </div>
+    <div class="result">
+
+    </div>
+
+
+    </main>
+</body>
+
+</html>
+
+
+
+
+
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue: hsla(256, 72%, 46% 1);
+    --persian-blue: hsla(241, 72%, 46% 0);
+    --background: linear-gradient(to bottom, hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+    --circle: linear-gradient(to bottom, hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+html {
+    font-size: 62.5%;
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+*,
+*::before,
+*::after {
+    boxing-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Hanken Grotesk";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #_next {
+    isolation: isolate;
+}
+
+/* CSS Reset ^^  */
+
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 55;
+    border-radius: 2rem;
+    background-color: white;
+    width: 50rem;
+    height: 35rem;
+    box-shadow: 1rem 1rem 1rem rgba(0,0,0,0.15);
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    font-size: 2rem;
+}
+
+.desc {
+    color: var(--light-lavender);
+    width: 60%;
+    margin-bottom: 2rem;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    border-radius: 2rem;
+    background-image: var(--background);
+    text-align: center;
+}
+
+.your-result {
+    margin: 2rem;
+    color: var(--light-lavender);
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    width: 15rem;
+    background-image: var(--circle);
+    border-radius: 50%;
+}
+
+.circle-text {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 500%;
+    font-weight: 700;
+    line-height: 1.1;
+    color: white;
+}
+
+.circle-text2 {
+    font-size: 1.25rem;
+    color: var(--light-slate-blue);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    border-radius: 2rem;
+    padding: 2.5rem;
+}
+
+-button:hover {
+     background-image: var(--background);
+     cursor: pointer;
+}
+
+.summary {
+    width: 100%;
+}
+
+button {
+    margin-top: 1.25rem;
+    border: none;
+    background-color: var(--dark-gray-blue);
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 2rem;
+}
+
+  button:hover {
+    background-image: var(--background);
+    cursor: pointer;
+}
+
+.reaction {
+    color: var(--light-red);
+    background-color: hsla(0, 100%, 67%, 10%);
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: .5rem;
+}
+
+.memory {
+    color: var(--Orangey-yellow);
+    background-color: hsla(39, 100%, 56%, 10%);
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: .5rem;
+}
+
+.verbal {
+    color: var(--green-teal);
+    background-color: hsla(166, 100%, 37%, 10%);
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5rem;
+}
+
+.visual { 
+    color: var(--violet-blue);
+    background-color: hsla(256, 72%, 46%, 10%);
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: .5rem;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+
+img {
+    max-width: 1.4rem;
+    margin-right: 1rem;
+}
+
+.firstNumber {
+    display: flex;
+    justify-content: right;
+    color: var(--dark-gray-blue);
+    width: 100%;
+    margin: 0;
+    padding-right: .25rem;
+    font-weight: 800;
+
+
+}
+
+.secondNumber {
+    display: flex;
+    justify-content: right;
+    color: gray;
+    margin: 0;
+
+
+}
+
+@media screen and (max-width: 500px)
+{
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        height: 100svh;
+        justify-content: space-between;
+
+
+}
+
+.results, .container {
+    width: 100%;
+    min-height: 40%;
+    border-radius: 0 0 3rem 3rem;
+}
+
+.secondNumber {
+    display: flex;
+    justify-content: flex-end;
+    color: gray;
+}
+
+.desc { font-size: 1.25rem;}
+
